@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ZXin Antiquity</title>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('source/admin/css/Iframe.css'); ?>" />
+<link rel="stylesheet" href="<?php echo base_url('source/admin/utilLib/bootstrap.min.css'); ?>" type="text/css" media="screen" />
+</head>
+
+<body>
+<br/>
+<form id="Antiquity_02" name="sizhu" method="post" action="<?php echo site_url('admin/admin_post/user_post_modify') ?>" enctype="multipart/form-data"/>
+<div id="">
+  <div class="div_5002_td1">
+    <div class="div_5002_tr">用户名：</div><br/>
+    <div class="div_5002_tr"></div><br/>
+    <div class="div_5002_tr">密码：</div><br/>
+    <div class="div_5002_tr">邮箱:</div><br/>
+  </div>
+  <?php foreach($detail as $value) { ?>
+  <div class="div_5002_td2">
+    <div class="div_5002_tr"><textarea name="name" cols="40" rows="1" readonly="readonly"><?php echo $value['u_name']?></textarea>(不可更改)</div><br/>
+    <div class="div_5002_tr">下面密码为md5加密后,管理员可直接删除,修改密码,后台自动加密.</div>
+    <div class="div_5002_tr"><textarea name="pwd" cols="40" rows="1"><?php echo $value['u_password']?></textarea></div><br/>
+    <div class="div_5002_tr"><textarea name="email" cols="40" rows="1"><?php echo $value['u_email']?></textarea></div><br/> 
+ 	<input name="id" type="hidden" value="<?php echo $value['u_id']?>" />
+ <?php } ?>
+
+</div>
+<div><input name="TiJiao" type="submit" /></div>
+</form>
+</body>
+</html>

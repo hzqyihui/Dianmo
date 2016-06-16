@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Antiquity</title>
+<link rel="stylesheet" type="text/css" href="css/Iframe.css" />
+<link rel="stylesheet" href="utilLib/bootstrap.min.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<br/>
+<form id="Artical" name="artical" method="post" action="<?php echo site_url('admin/admin_post/artical_post') ?>" enctype="multipart/form-data">
+<table id="Table2">
+  <tr>
+    <td class="Td">文章名：</td>
+    <td class="Td"><textarea class="Forms" name="articalName" cols="20" rows="1"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">作者：</td>
+    <td class="Td"><textarea class="Forms" name="articalAuthor" cols="20" rows="1"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">原文：</td>
+    <td class="Td"><textarea class="FormsLong" name="articalOrigina" cols="100" rows="5"></textarea></td>
+  <tr>
+  <tr>
+    <td class="Td">分类：</td>
+    <td><select class="classfiy" name="class[]" >
+        <option value="古人风韵" selected="true">古人风韵</option>
+        <option value="现代美文">现代美文</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td class="Td">作者头像：</td>
+    <td class="Td"><input type="file" name="pic_path"/></td>
+  </tr>
+    <td class="Td"></td>
+    <td class="Td"><input type="submit" /></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Antiquity</title>
+<link rel="stylesheet" type="text/css" href="css/Iframe.css" />
+<link rel="stylesheet" href="utilLib/bootstrap.min.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<br/>
+<form id="Poem" name="poem" method="post" action="<?php echo site_url('admin/admin_post/shici_post') ?>" enctype="multipart/form-data">
+<table id="Table2" >
+  <tr>
+    <td class="Td">诗词名：</td>
+    <td class="Td"><textarea class="Forms" name="poemName" cols="20" rows="1"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">作者：</td>
+    <td class="Td"><textarea class="Forms" name="pomeAuthor" cols="20" rows="1"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">原文：</td>
+    <td class="Td"><textarea class="FormsLong" name="pomeOrigina" cols="100" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">注释：</td>
+    <td class="Td"><textarea class="FormsLong" name="pomeComments" cols="100" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">翻译：</td>
+    <td class="Td"><textarea class="FormsLong" name="pomeTranslation" cols="100" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">赏析：</td>
+    <td class="Td"><textarea class="FormsLong" name="pomeAppreciation" cols="100" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">分类：</td>
+    <td><select class="classfiy" name="class[]" >
+        <option value="诗" selected="true">诗</option>
+        <option value="词">词</option>
+        <option value="曲">曲</option>
+        <option value="赋">赋</option>
+        <option value="辞">辞</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td class="Td">头像：</td>
+    <td class="Td"><input type="file" name="pic_path"/></td>
+  </tr>
+  <tr>
+  	<td class="Td">(新作者第一次上传头像为默认头像)</td>
+    <td class="Td"></td>
+  </tr>
+  <tr>
+    <td class="Td"></td>
+    <td class="Td"><input type="submit" /></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

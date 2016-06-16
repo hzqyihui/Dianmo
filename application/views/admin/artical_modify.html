@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Antiquity</title>
+<link rel="stylesheet" type="text/css" href="css/Iframe.css" />
+<link rel="stylesheet" href="utilLib/bootstrap.min.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<br/>
+<form id="Artical" name="artical" method="post" action="<?php echo site_url('admin/admin_post/artical_post_modify') ?>"/ enctype="multipart/form-data">
+<?php foreach($detail as $value) { ?>
+<table id="Table2">
+  <tr>
+    <td class="Td">文章名：</td>
+    <td class="Td"><textarea class="Forms" name="articalName" cols="20" rows="1"><?php echo $value['name']?></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">作者：(要修改请去作者栏目)</td>
+    <td class="Td"><textarea class="Forms" readonly="readonly" name="articalAuthor" cols="20" rows="1"><?php echo $value['writer']?></textarea></td>
+  </tr>
+  <tr>
+    <td class="Td">原文：</td>
+    <td class="Td"><textarea class="FormsLong" name="articalOrigina" cols="100" rows="5"><?php echo $value['artical']?></textarea></td>
+  <tr>
+  <tr>
+   <td class="Td">分类：</td>
+    <td><select class="classfiy" name="class[]" >
+        <option value="古人风韵" <?php if($value['class'] == '古人风韵') echo "selected='true'" ?>>古人风韵</option>
+        <option value="现代美文" <?php if($value['class'] == '现代美文') echo "selected='true'" ?>>现代美文</option>
+    </select></td>
+  </tr>
+  <tr>
+  	<td class="Td">原图片(默认为第一次上传的头像):</td>
+  	<td><textarea name="pic_old_path" readonly="readonly"cols="40" rows="1"><?php echo $value['pic_path']; ?></textarea></td>
+  </tr>
+  <tr>
+  	<td class="Td">新图片:</td>
+  	<td><input type="file" name="pic_new_path"></td>
+  </tr>
+  <input name="id" type="hidden" value="<?php echo $value['id']?>" />
+    <td class="Td"></td>
+    <td class="Td"><input type="submit" /></td>
+  </tr>
+</table>
+<?php } ?>
+</form>
+</body>
+</html>

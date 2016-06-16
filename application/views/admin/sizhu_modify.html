@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ZXin Antiquity</title>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('source/admin/css/Iframe.css'); ?>" />
+<link rel="stylesheet" href="<?php echo base_url('source/admin/utilLib/bootstrap.min.css'); ?>" type="text/css" media="screen" />
+</head>
+
+<body>
+<br/>
+<form id="Antiquity_02" name="sizhu" method="post" action="<?php echo site_url('admin/admin_post/sizhu_post_modify') ?>" enctype="multipart/form-data"/>
+<div id="">
+  <div class="div_5002_td1">
+    <div class="div_5002_tr">歌曲名：</div><br/>
+    <div class="div_5002_tr">演唱：</div><br/>
+    <div class="div_5002_tr">作词：</div><br/>
+    <div class="div_5002_tr">作曲：</div><br/>
+    <div class="div_5002_tr">编曲：</div><br/>
+    <div class="div_geci_tr1">歌词：</div><br/>
+    <div class="div_5002_tr">上传者头像地址(不可更改):</div><br/>
+    <div class="div_5002_tr">上传者音乐地址(不可更改):</div><br/>
+  </div>
+  <?php foreach($detail as $value) { ?>
+  <div class="div_5002_td2">
+    <div class="div_5002_tr"><textarea name="music_name" cols="40" rows="1"><?php echo $value['music_name']?></textarea></div><br/>
+    <div class="div_5002_tr"><textarea name="singer" cols="40" rows="1"><?php echo $value['singer']?></textarea></div><br/>
+    <div class="div_5002_tr"><textarea name="writer" cols="40" rows="1"><?php echo $value['writer']?></textarea></div><br/>
+    <div class="div_5002_tr"><textarea name="composer" cols="40" rows="1"><?php echo $value['composer']?></textarea></div><br/>
+    <div class="div_5002_tr"><textarea name="arranger" cols="40" rows="1"><?php echo $value['arranger']?></textarea></div><br/>
+    <div class="div_geci_tr1"><textarea name="lyric" cols="40" rows="5"><?php echo $value['lyric']?></textarea></div><br/>
+    <div class="div_5002_tr"><textarea name="pic_old_path" readonly="readonly"cols="40" rows="1"><?php echo $value['pic_path']?></textarea></div><br/> 
+ 		<div class="div_5002_tr"><textarea name="music_old_path" readonly="readonly"cols="40" rows="1"><?php echo $value['music_path']?></textarea></div><br/> 
+ 		<input name="id" type="hidden" value="<?php echo $value['id']?>" />
+ 		<input name="upload_id" type="hidden" value="<?php echo $value['upload_id']?>" />
+ <?php } ?>
+
+	</div>
+</div>
+<div><input name="TiJiao" type="submit" /></div>
+</form>
+</body>
+</html>

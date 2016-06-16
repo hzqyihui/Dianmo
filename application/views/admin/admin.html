@@ -1,0 +1,103 @@
+<?php
+session_start();
+if(isset($_SESSION['last_time'])){
+	if((time()-$_SESSION['last_time'])>6000){
+	echo "<script>alert('检测到您登录超时！请登录，再进入此页面！');</script>";
+	header('Refresh:0.01; url='.site_url('banner/to_log'));
+	exit;
+	}
+}
+else{
+	echo "<script>alert('检测到您未曾登录！请登录，再进入此页面！');</script>";
+	header('Refresh:0.01; url='.site_url('banner/to_log'));
+}
+
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ZXin Antiquity</title>
+
+<link rel="stylesheet" href="<?php echo base_url('source/admin/css/index.css'); ?>" type="text/css" media="screen" />
+
+<script type="text/javascript" src="<?php echo base_url('source/admin/js/jquery.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('source/admin/js/tendina.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('source/admin/js/common.js'); ?>"></script>
+
+</head>
+<body>
+    <!--顶部-->
+    <div class="top">
+            <div style="float: left"><span style="font-size: 16px;line-height: 45px;padding-left: 20px;color: #fff">点墨古风交流平台后台管理系统</h1></span></div>
+            <div id="ad_setting" class="ad_setting">
+                <a class="ad_setting_a" href="javascript:; ">亲爱的管理员,欢迎您!</a>
+                <ul class="dropdown-menu-uu" style="display: none" id="ad_setting_ul">
+                    <li class="ad_setting_ul_li"> <a href="<?php echo site_url('admin/log_form/log_out'); ?>"><i class="icon-signout glyph-icon"></i> <span class="font-bold">退出</span> </a> </li>
+                </ul>
+                <img class="use_xl" src="<?php echo base_url('source/admin/images/right_menu.png'); ?>" />
+            </div>
+    </div>
+    <!--顶部结束-->
+    <!--菜单-->
+    <div class="left-menu">
+        <ul id="menu">
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>用户管理<s class="sz"></s></a>
+                <ul>
+                    <li><a href="<?php echo site_url('admin/admin_post/user_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right1"></i>用户修改与删除</a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>数据添加<s class="sz"></s></a>
+                <ul>
+                    <li><a href="<?php echo site_url('banner/to_admin_3'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right2"></i>诗词赏析</a></li>
+                    <li><a href="<?php echo site_url('banner/to_admin_5'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right3"></i>陌上遗风</a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>数据管理<s class="sz"></s></a>
+                <ul>
+                    <li><a href="<?php echo site_url('admin/admin_post/sizhu_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right1"></i>丝竹古韵</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/shici_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right2"></i>诗词赏析</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/shuhua_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right3"></i>古人书画</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/artical_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right3"></i>陌上遗风</a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>评论管理<s class="sz"></s></a>
+                <ul>
+                    <li><a href="<?php echo site_url('admin/admin_post/comment_sizhu_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right1"></i>丝竹古韵</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/comment_shici_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right2"></i>诗词赏析</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/comment_shuhua_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right3"></i>古人书画</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/comment_artical_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right3"></i>陌上遗风</a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>上传管理<s class="sz"></s></a>
+                <ul>
+                    <li><a href="<?php echo site_url('admin/admin_post/upload_sizhu_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right1"></i>丝竹古韵</a></li>
+                    <li><a href="<?php echo site_url('admin/admin_post/upload_shuhua_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right3"></i>古人书画</a></li>
+                </ul>
+            </li>
+            <li class="menu-list">
+               <a style="cursor:pointer" class="firsta"><i  class="glyph-icon xlcd"></i>作者栏目<s class="sz"></s></a>
+                <ul>
+                    <li><a href="<?php echo site_url('admin/admin_post/writer_show'); ?>" target="menuFrame"><i class="glyph-icon icon-chevron-right1"></i>作者管理</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <!--菜单右边的iframe页面-->
+    <div id="right-content" class="right-content">
+        <div class="content">
+            <div id="page_content">
+                <iframe id="menuFrame" name="menuFrame" src="<?php echo site_url('banner/to_admin_0'); ?>" style="overflow:visible;"
+                        scrolling="yes" frameborder="no" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Antiquity</title>
+<link rel="stylesheet" type="text/css" href="css/Iframe.css" />
+<link rel="stylesheet" href="utilLib/bootstrap.min.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<br/>
+<form id="Poem" name="poem" method="post" action="<?php echo site_url('admin/admin_post/writer_post_modify') ?>" enctype="multipart/form-data"/>
+<?php foreach($detail as $value) { ?>
+<table id="Table2" >
+  <tr>
+    <td class="Td">作者名：</td>
+    <td class="Td"><textarea class="Forms" name="Name" cols="20" rows="1"><?php echo $value['name']?></textarea></td>
+  </tr>
+  
+    <td class="Td">分类：(此类不可修改)</td>
+    <td><input type="text"  readonly="readonly" value="<?php echo $value['class'];?>"></td>  
+  </tr>
+  <tr>
+  	<td class="Td">原图片:</td>
+  	<td><textarea name="pic_old_path" readonly="readonly"cols="40" rows="1"><?php echo $value['pic_path']; ?></textarea></td>
+  </tr>
+  <tr>
+  	<td class="Td">新图片:</td>
+  	<td><input type="file" name="pic_new_path"></td>
+  </tr>
+  <input name="id" type="hidden" value="<?php echo $value['id']?>" />
+  <tr>
+    <td class="Td"></td>
+    <td class="Td"><input type="submit" /></td>
+  </tr>
+</table>
+ <?php } ?>
+</form>
+</body>
+</html>

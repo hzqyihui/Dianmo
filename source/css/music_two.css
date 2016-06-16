@@ -1,0 +1,292 @@
+html,body{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 1600px;
+	font-family: "微软雅黑";
+	background: #f5f5f5;
+	font-size: 14px;
+	color: #333;
+}
+ul,li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+/* 中间主内容 */
+.main2_1{
+	width: 1200px;
+	height: 1550px;
+	background: url(../../source/images/second/music/music_two.png) top center no-repeat;
+	background-size: 1200px 1550px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.main_song{
+	width: 800px;
+	height: 500px;
+	margin-top: 100px;
+	float: left;
+	background: url(../../source/images/second/music/frame.png) no-repeat;
+}
+.main_song_tle{
+	width: 750px;
+	height: 100px;
+	padding-left: 30px;
+	padding-top: 25px;
+}
+/* 热门音乐人 */
+.main_singer{
+	width: 800px;
+	height: 500px;
+	float: left;
+	background: url(../../source/images/second/music/frame.png) no-repeat;
+}
+.main_singer_tle{
+	width: 750px;
+	height: 100px;
+	padding-left: 30px;
+	padding-top: 25px;
+}
+.singer_head{
+	width: 700px;
+	height: 300px;
+	margin: 15px 40px 0 60px;
+}
+.sing_head_1{
+	float: left;
+	width: 198px;
+	height: 278px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #E4DEDE;
+}
+.sing_head_1 img{
+	margin-left: 11px;
+	margin-top: 39px;
+}
+.sing_head_s{
+	float: left;
+	width: 138px;
+	height: 128px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #E4DEDE;
+}
+/* 榜单 */
+.main_rank_list{
+	width: 350px;
+	height: 1000px;
+	margin-top: 100px;
+	float: right;
+	margin-right: 25px;
+}
+.list_ul{
+	width: 350px;
+	height: 1000px;
+}
+.list_li{
+	width: 350px;
+	height: 90px;
+	background-color: rgba(0,117,169,0.13);
+	margin-bottom: 10px;
+}
+.list_li h3{
+	font-size: 30px;
+	margin: 0;
+	padding-top: 25px;
+	padding-left: 15px;
+	font-weight: normal;
+}
+.list_li_1{
+	width: 350px;
+	height: 40px;
+	margin-bottom: 10px;
+	background: url(../../source/images/second/music/ranklist.png) top no-repeat;
+	/* border-bottom: 1px solid #666; */
+}
+/* .list_li_2{
+	width: 350px;
+	height: 40px;
+	background: url(../image/ranklist.png) top no-repeat;
+} */
+.list_songname{
+	float: left;
+	width: 175px;
+	height: 40px;
+	font-size: 16px;
+	padding-left: 15px;
+}
+.list_name{
+	float: right;
+	width: 105px;
+	height: 40px;
+	font-size: 14px;
+}
+.list_li_1 .list_name a{
+	color: #666;
+}
+.list_li_1 a{
+	line-height: 40px;
+	color: #333;
+}
+.list_li_1 a:hover{
+	text-decoration: underline;
+}
+
+/* 精选好歌 */
+.main_song_table{
+	width: 680px;
+	height: 320px;
+	margin: 15px auto 0 auto;
+}
+.main_song_table table{
+	border: 0;
+	width: 680px;
+	height: 280px;
+}
+.main_song_table table td{
+	border-bottom: 1px dashed #dfe1e3;
+}
+.table_songname{
+	width: 320px;
+}
+.table_name{
+	width: 200px;
+}
+.table_name a{
+	color: #999;
+	font-size: 14px;
+}
+.table_name td{
+	text-align: center;
+}
+.table_name a{
+	text-align: center;
+	width: 150px;
+	margin: 0 auto;
+}
+.play a{
+	text-align: center;
+	height: 20px;
+	width: 20px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	background:url(../../source/images/second/music/play.png) no-repeat;
+	background-size: 20px 20px;
+}
+.download a{
+	text-align: center;
+	height: 20px;
+	width: 20px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	background:url(../../source/images/second/music/download.png) no-repeat;
+	background-size: 20px 20px;
+}
+.praise a{
+	text-align: center;
+	height: 20px;
+	width: 20px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	background:url(../../source/images/second/music/praise.png) no-repeat;
+	background-size: 20px 20px;
+}
+.praise a:hover{
+	background:url(../../source/images/second/music/praisehover.png) no-repeat;
+}
+.praise a:active{
+	background:url(../../source/images/second/music/praisehover.png) no-repeat;
+}
+table a{
+	font-size: 15px;
+	color: #333;
+}
+table a:hover{
+	color: #277c88;
+}
+/* 新歌速递 */
+.new_song{
+	width: 1200px;
+	height: 450px;
+	background: url(../../source/images/second/music/newsongs.png);
+	float: left;
+}
+.new_song_main{
+	width: 1200px;
+	height: 300px;
+	margin-top: 100px;
+}
+.new_song_1{
+	width: 370px;
+	height: 130px;
+	padding: 10px 15px;
+	float: left;
+}
+.new_song_head{
+	width: 130px;
+	height: 130px;
+	padding-right: 30px;
+	float: left;
+}
+.new_song_char{
+	width: 200px;
+	height: 130px;
+	float: right;
+	margin-right: 10px;
+}
+.new_song_char ul{
+	width: 200px;
+	height: 110px;
+	margin: 10px 0;
+}
+.new_song_char li a,p{
+	text-align: left;
+	line-height: 25px;
+}
+.new_song_char p{
+	margin: 10px 0;
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient:vertical;
+}
+.char1{
+	height: 27px;
+	font-size: 15px;
+}
+.char1 a{
+	color: #277c88;
+}
+.char2{
+	height: 23px;
+	font-size: 13px;
+}
+.char2 a{
+	color: #999;
+}
+.char3{
+	height: 60px;
+	font-size: 14px;
+}
+/* 尾部 */
+.off2_1{
+	width: 100%;
+	height: 100px;
+	background:#343434; 
+}
